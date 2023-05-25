@@ -13,7 +13,7 @@ on:
 jobs:
   build-and-test:
 
-    runs-on: macos-latest
+    runs-on: macos-13
 
     steps:
     - uses: actions/checkout@v3
@@ -24,5 +24,3 @@ jobs:
     - name: Build and test
       run: xcodebuild clean build test -project EssentialFeed/EssentialFeed.xcodeproj -scheme "CI" CODE_SIGNING_IDENTITY="" CODE_SIGNING_REQUIRED=NO
       
-    - name: Run tests
-      run: swift test -v
